@@ -5,19 +5,21 @@
   
 
   
-  <title>个人博客搭建笔记 | Myblog</title>
+  <title>个人博客的搭建笔记 | Myblog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="疫情被困在老家两个月，年前回家的时候是计划二月初就回校准备毕业论文的，书和笔记本都没带回来，这下可好，呵呵。幸亏老家还有一台旧电脑，拼死拼活把毕设做好了初稿，还是闲着没事干怎么办？不如来搭建一下个人博客吧。几年前有试着去做过几次，但都因为觉得太麻烦而半途而废了。这次一定要克服这种知难而退的坏毛病！ 博客平台的选择：可以选择GitHub，cnblog，或者csdn。csdn广告可以理解但是着实让人头">
 <meta property="og:type" content="article">
-<meta property="og:title" content="个人博客搭建笔记">
-<meta property="og:url" content="http://yoursite.com/2020/04/01/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:title" content="个人博客的搭建笔记">
+<meta property="og:url" content="http://yoursite.com/2020/04/02/blog1/index.html">
 <meta property="og:site_name" content="Myblog">
 <meta property="og:description" content="疫情被困在老家两个月，年前回家的时候是计划二月初就回校准备毕业论文的，书和笔记本都没带回来，这下可好，呵呵。幸亏老家还有一台旧电脑，拼死拼活把毕设做好了初稿，还是闲着没事干怎么办？不如来搭建一下个人博客吧。几年前有试着去做过几次，但都因为觉得太麻烦而半途而废了。这次一定要克服这种知难而退的坏毛病！ 博客平台的选择：可以选择GitHub，cnblog，或者csdn。csdn广告可以理解但是着实让人头">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-04-01T14:55:52.468Z">
-<meta property="article:modified_time" content="2020-04-02T05:04:39.759Z">
+<meta property="og:image" content="http://yoursite.com/2020/04/02/blog1/blog1_1.png">
+<meta property="article:published_time" content="2020-04-02T02:55:02.000Z">
+<meta property="article:modified_time" content="2020-04-02T06:39:07.285Z">
 <meta property="article:author" content="Joyfulmika">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2020/04/02/blog1/blog1_1.png">
   
     <link rel="alternate" href="/atom.xml" title="Myblog" type="application/atom+xml">
   
@@ -66,10 +68,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-个人博客搭建笔记" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-blog1" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/04/01/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E7%AC%94%E8%AE%B0/" class="article-date">
-  <time datetime="2020-04-01T14:55:52.468Z" itemprop="datePublished">2020-04-01</time>
+    <a href="/2020/04/02/blog1/" class="article-date">
+  <time datetime="2020-04-02T02:55:02.000Z" itemprop="datePublished">2020-04-02</time>
 </a>
     
   </div>
@@ -80,7 +82,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      个人博客搭建笔记
+      个人博客的搭建笔记
     </h1>
   
 
@@ -108,21 +110,28 @@
 <p>本地git生成rsa密钥，在github上添加，本地命令<code>ssh -T git@github.com</code>查询，得到<code>Hi，用户名</code> 字样的响应就能确定git和github连上了。<br><br>打开配置文件_config.yml，找到deployment部分进行填写，注意冒号后一定要有空格,不然这一行识别失败。</p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: https://hexo.io/docs/deployment.html</span></span><br><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repository:</span> <span class="string">git@github.com:name/example.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
 <p>在上传之前，先下载一个相关插件<code>hexo-deployer-git</code>。博客根目录打开cmd输入：</p>
-<figure class="highlight plain"><figcaption><span>install hexo-deployer-git --save```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">安装完毕后，在博客根目录打开Git Bash（用win自带的cmd听说可能有权限问题？？），运行命令：</span><br></pre></td></tr></table></figure>
-<p>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</p>
-<pre><code>清缓存、重新生成、上传一气呵成。打开github的仓库界面可以看到，hexo上传的是编译出来的web工程。&lt;br&gt;
-最后要github要注意一个点，上传的仓库名字一定一定一定一定要叫```用户名.github.io```,github pages里选择masterbranch，不然会出现404。
-最后效果如图所示：
-![avatar](img/blog1_1.png)
-## 后记
-终于做出来啦！这是我第一次做博客，markdown也打的很粗糙，前前后后边查资料打代码边打博客花了接近四个小时，hexo的使用没有想象中的快速，在更新网页后本地查看时会加载比较久的时间，还有坑爹的包下载速度，但我心中还是充满了喜悦。世上无难事，只要肯攀登，希望自己以后也能如此坚持下去吧！
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
 
+<p>安装完毕后，在博客根目录打开Git Bash（用win自带的cmd听说可能有权限问题？？），运行命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure>
 
-</code></pre>
+<p>清缓存、重新生成、上传一气呵成。打开github的仓库界面可以看到，hexo上传的是编译出来的web工程。<br><br>最后要github要注意一个点，上传的仓库名字一定一定一定一定要叫<code>用户名.github.io</code>,github pages里选择masterbranch，不然会出现404。<br><br>另外，hexo有时候会出现代码段的反引号识别失败的问题，把代码段外的内容都算进去。查询后的结果说是hexo支持的md规范相对严谨，最好在反引号使用时前后都要空出一行，那行吧。<br><br>一开始效果图显示不出来，查一下是要如下设置：</p>
+<ol>
+<li><p>下载hexo-asset-image插件：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install https:&#x2F;&#x2F;github.com&#x2F;CodeFalling&#x2F;hexo-asset-image --save</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<p>他会令你新建博文md文件的时候创建一个同名文件夹，那我这已经写好了的就自己手动创一个，把图片丢进去并用相对路径写好引用。<br>2. 打开_config.yml，修改<code>post_asset_folder</code>选项为true，让你的hexo明白你的博文有附带的文件夹。<br>3. 运行命令</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo s &amp;&amp; hexo g</span><br></pre></td></tr></table></figure>
+
+<p>先在本地查看一下效果。注意开启了服务器的一定要重新开，才能重新加载_config。<br>最后效果如图所示：<br><img src="/2020/04/02/blog1/blog1_1.png" alt="示例"></p>
+<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>终于做出来啦！这是我第一次做博客，markdown也打的很粗糙，配环境配到一半才想起来可以同步打点字，也是到最后才想起来可以加点图，前前后后边查资料打代码边打博客反复调试花了接近四个小时，hexo的使用没有想象中的快速，在更新网页后本地查看时会加载比较久的时间，还有坑爹的包下载速度，但我心中还是充满了喜悦。世上无难事，只要肯攀登，希望自己以后也能如此坚持下去吧！</p>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/04/01/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E7%AC%94%E8%AE%B0/" data-id="ck8iapzts0001s4u71ftydtbi" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/04/02/blog1/" data-id="ck8ie2rfu0001osu7gaoc3gka" class="article-share-link">Share</a>
       
       
     </footer>
@@ -135,7 +144,7 @@
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          Hexo配置笔记
+          个人博客的搭建笔记
         
       </div>
     </a>
@@ -175,11 +184,11 @@
       <ul>
         
           <li>
-            <a href="/2020/04/02/Hexo%E9%85%8D%E7%BD%AE%E7%AC%94%E8%AE%B0/">Hexo配置笔记</a>
+            <a href="/2020/04/02/Hexo%E9%85%8D%E7%BD%AE%E7%AC%94%E8%AE%B0/">个人博客的搭建笔记</a>
           </li>
         
           <li>
-            <a href="/2020/04/01/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E7%AC%94%E8%AE%B0/">个人博客搭建笔记</a>
+            <a href="/2020/04/02/blog1/">个人博客的搭建笔记</a>
           </li>
         
       </ul>
