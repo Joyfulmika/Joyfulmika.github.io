@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Hexo配置笔记 | Myblog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="最近准备用hexo搭建个人博客，顺便从官网里记录一点配置资料吧。官网链接(https:&#x2F;&#x2F;hexo.io&#x2F;zh-cn&#x2F;docs&#x2F;configuration.html)。 hexo的目录结构如下： 123456789|-- _config.yml     ----全局配置文件|-- package-lock.json|-- package.json    ----hexo框架的参数和所依赖插件|--">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo配置笔记">
+<meta property="og:url" content="http://yoursite.com/2020/04/02/Hexo%E9%85%8D%E7%BD%AE%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:site_name" content="Myblog">
+<meta property="og:description" content="最近准备用hexo搭建个人博客，顺便从官网里记录一点配置资料吧。官网链接(https:&#x2F;&#x2F;hexo.io&#x2F;zh-cn&#x2F;docs&#x2F;configuration.html)。 hexo的目录结构如下： 123456789|-- _config.yml     ----全局配置文件|-- package-lock.json|-- package.json    ----hexo框架的参数和所依赖插件|--">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-04-02T03:26:24.333Z">
+<meta property="article:modified_time" content="2020-04-02T04:27:47.795Z">
+<meta property="article:author" content="Joyfulmika">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Myblog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Myblog</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Hexo配置笔记" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/04/02/Hexo%E9%85%8D%E7%BD%AE%E7%AC%94%E8%AE%B0/" class="article-date">
+  <time datetime="2020-04-02T03:26:24.333Z" itemprop="datePublished">2020-04-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Hexo配置笔记
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>最近准备用hexo搭建个人博客，顺便从官网里记录一点配置资料吧。官网链接(<a href="https://hexo.io/zh-cn/docs/configuration.html)。" target="_blank" rel="noopener">https://hexo.io/zh-cn/docs/configuration.html)。</a><br></p>
+<p>hexo的目录结构如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">|-- _config.yml     ----全局配置文件</span><br><span class="line">|-- package-lock.json</span><br><span class="line">|-- package.json    ----hexo框架的参数和所依赖插件</span><br><span class="line">|-- scaffolds		----脚手架，新建文章时hexo会用这个目录的文件构建</span><br><span class="line">|-- source			----资源目录</span><br><span class="line">   |-- _posts		----存放新建博文</span><br><span class="line">|-- themes			----网站主题目录，每个子目录对应一主题，landscape为默认</span><br><span class="line">|-- public          ----存放编译后md文件生成的html界面</span><br><span class="line">|-- .gitignore		----git过滤规则文件</span><br></pre></td></tr></table></figure>
+<p>打开网页的配置文件_config.yml,可以设置如下网页属性：</p>
+<h2 id="网站"><a href="#网站" class="headerlink" title="网站"></a>网站</h2><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>title</td>
+<td>网站标题</td>
+</tr>
+<tr>
+<td>subtitle</td>
+<td>网站副标题</td>
+</tr>
+<tr>
+<td>description</td>
+<td>网站描述</td>
+</tr>
+<tr>
+<td>keywords</td>
+<td>网站的关键词。使用半角逗号 , 分隔多个关键词。</td>
+</tr>
+<tr>
+<td>author</td>
+<td>您的名字</td>
+</tr>
+<tr>
+<td>language</td>
+<td>网站使用的语言。对于简体中文用户来说，使用不同的主题可能需要设置成不同的值，请参考你的主题的文档自行设置，常见的有 zh-Hans和 zh-CN。</td>
+</tr>
+<tr>
+<td>timezone</td>
+<td>网站时区。Hexo 默认使用您电脑的时区。请参考 时区列表 进行设置，如 America/New_York, Japan, 和 UTC 。一般的，对于中国大陆地区可以使用 Asia/Shanghai。</td>
+</tr>
+</tbody></table>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/04/02/Hexo%E9%85%8D%E7%BD%AE%E7%AC%94%E8%AE%B0/" data-id="ck8i9i8590000q4u7d5ou9pla" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2020/04/01/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E7%AC%94%E8%AE%B0/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">个人博客搭建笔记</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">四月 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/04/02/Hexo%E9%85%8D%E7%BD%AE%E7%AC%94%E8%AE%B0/">Hexo配置笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/01/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E7%AC%94%E8%AE%B0/">个人博客搭建笔记</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 Joyfulmika<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
